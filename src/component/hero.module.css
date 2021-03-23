@@ -1,0 +1,12 @@
+   
+
+ img{
+    height: 40vh;
+    width: 100vw;
+     object-fit:cover; 
+     position:relative;
+     top:0;
+     left:0;
+     background-size: cover;
+      background-repeat: no-repeat;
+}

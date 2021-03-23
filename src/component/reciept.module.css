@@ -1,0 +1,27 @@
+
+.Recipe {
+ 
+    width: 16.5rem;
+    position: relative;
+    border: 1px solid #cecece;
+    padding: 2.25rem 1rem 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+  }
+  
+  @media(max-width: 745px) {
+    .reciept {
+      width: 100%;
+    }
+  }
+  .Recipe .h2{
+   color: #fff;
+  }
+
+  img{
+    height: 150px;
+    width: 120px;
+}
+a{
+  
+}
