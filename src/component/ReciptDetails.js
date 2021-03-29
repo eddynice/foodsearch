@@ -1,11 +1,15 @@
 import React from 'react'
+import {v4 as uuidv4} from "uuid"
+import style from "./recieped.module.css"
 
 const ReciptDetails = ({ingredients}) =>{
     return ingredients.map(ingredient=>{
         return (
-           <ul key={ingredient.id} className="indredient-list">
-           <li className="list">{ingredient.text}</li>
-           <li className="weight"> Weight-{ingredient.weight}</li>
+           <ul key={uuidv4()} className={style.ulist}>
+               <div className={style.list}  >
+           <li >{ingredient.text}</li>
+           <li > Weight-{ingredient.weight}</li>
+           </div>
      
            
            </ul>
@@ -14,4 +18,4 @@ const ReciptDetails = ({ingredients}) =>{
     })
    
 }
-export default   ReciptDetails
+export default  ReciptDetails

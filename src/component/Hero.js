@@ -1,5 +1,6 @@
 import React,{useState, useRef,useEffect} from 'react';
 import style from "./hero.module.css"
+//import {v4 as uuid} from "uuid"
 
 export default function Hero({slide}) {
     const [current, setcurrent] = useState(0)

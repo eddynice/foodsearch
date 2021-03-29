@@ -2,7 +2,7 @@ import React,{useState} from "react"
 import  style from "./App.module.css"
 import Alert from "./component/Alert"
 import Axios from "axios"
-import  uid from "uuid"
+import { v4 as uuidv4 }from "uuid"
 import Recipe from "./component/Recipe"
 import {SlideData} from "./data/Info"
 import Hero from "./component/Hero"
@@ -14,25 +14,25 @@ export default function App() {
   const [reciept, setRecipt] = useState([])
   const [alert, setAlert] = useState("")
 
-    const APP_KEY="ac23f2ffd7b728c4eb1d8ffa8fb5b997	"
-    const APP_id="4217f819"
-    const url=`https://api.edamam.com/search?q=chicken&app_id=${APP_id}&app_key=${APP_KEY}`
-
+    const YOUR_APP_KEY="3225a92514b155628c2ecd21c3f46313"
+    const YOUR_APP_ID="99fdb152"
+    const url=`https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`
+    //https://api.edamam.com/search?q=chicken&app_id=${4217f819}&app_key=${ac23f2ffd7b728c4eb1d8ffa8fb5b997	}
     const getData = async () =>{
       if(query !== ""){
         const result =await Axios.get(url)
-        console.log(result)
-       if(!result.data){
+       
+       if(!result.data.more){
         return setAlert("no food with such name")
        }
-        setRecipt(result)
-     console.log(result)
-     setAlert()
+        setRecipt(result.data.hits)
+     
+     setAlert("")
      setQuery("");
     }else{
       setAlert("please fill the form")
     }
-  }
+    }
   
 
  
@@ -52,7 +52,7 @@ const  onClhange = (e)=>{
     return (
         <div className={style.app}>
            <h1 > TRU-FOOD SEARCHING APP</h1>
-          <Hero slide={SlideData}/>
+        <Hero slide={SlideData}/>
            
             <form onSubmit={Onsubmit}>
             {alert !== "" &&   <Alert alert={alert} />}
@@ -65,9 +65,8 @@ const  onClhange = (e)=>{
 
             </form>
             <div className={style.gridContainer}>
-              {reciept !== [] && reciept.map(reciept=>(
-               <Recipe key={uid}
-                reciept={reciept} 
+              {reciept !== [] && reciept.map(reciepts=>(
+               <Recipe key={uuidv4()} reciepts={reciepts} 
                 />
               )
 
