@@ -1,58 +1,68 @@
-.app{
-  text-align: center;
-  background-image: -moz-linear-gradient();
-
-}
-.app h1{
-  color:rgba(84, 106, 201, 1);
- 
- text-shadow:1px 1px 2px black, 0 0 25px blue,  0 0 5px darkblue;
-}
-
-.app form{
-  margin:30px 60px;
-  background: transparent;
-  padding: 5px;
-  box-shadow:1px 1px 2px black, 0 0 25px blue,  0 0 5px darkblue;
-
-}
-
-form input[type=text]{
-  width: 100%;
-  padding: 12px 20px;
-
-  box-sizing: border-box;
-  outline: none;
-  border-radius: 5px;
-  font-size: 20px;
-  border: 3px solid #000;
-}
-
-form input[type=text] ::focus ::placeholder{
-  opacity: 0;
-  word-spacing: 2px;
-}
-
-
-input[type=submit]{
-  background-color:#000;
-  border:none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 50%;
- 
-}
- .gridContainer{
-  display: flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 1rem 5px;
-  
-  
-}
-
+    .app {
+        max-width: 1200px;
+        line-height: 1.5;
+        margin: 0 auto;
+        border: 10px solid hsla(0, 0%, 100%, .5);
+        background-clip: padding-box;
+    }
+    
+    .app h1 {
+        text-align: center;
+        font-size: 54px;
+        font-style: italic;
+        color: antiquewhite;
+        line-height: 1.5;
+    }
+    
+    .app form {
+        margin: 30px 60px;
+        background: transparent;
+        padding: 5px;
+    }
+    
+    form input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        outline: none;
+        border-radius: 5px;
+        font-size: 20px;
+        background-color: antiquewhite;
+        border: 1px solid rgb(68, 65, 65);
+    }
+    
+    form input[type=text] ::focus ::placeholder {
+        opacity: 0;
+        word-spacing: 2px;
+    }
+    
+    .bt {
+        border: none;
+        color: antiquewhite;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px auto;
+        cursor: pointer;
+        border-radius: 2px;
+        width: 50%;
+        background-color: rgb(77, 68, 68);
+        margin: 1px 20%;
+    }
+    
+    form .bt :hover {
+        background-color: #4CAF50;
+        /* Green */
+    }
+    
+    input ::hover [type=submit] {
+        background-color: black;
+        color: white;
+    }
+    
+    .gridContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem 5px;
+    }

@@ -1,27 +1,23 @@
-
 .Recipe {
-  
- 
- 
     width: 16.5rem;
     position: relative;
     border: 1px solid #cecece;
     padding: 2.25rem 1rem 1.25rem 1.5rem;
     margin: 1.5rem 1rem;
     border-radius: 10px;
-    box-shadow:1px 1px 2px black, 0 0 25px blue,  0 0 5px darkblue;
-  }
-  
-  @media(max-width: 745px) {
-    .reciept {
-      width: 100%;
-    }
-  }
-  .Recipe .h2{
-   color: #fff;
-  }
+    box-shadow: 1px 1px 2px gray;
+}
 
- 
-a{
-  text-decoration: none;
+@media(max-width: 745px) {
+    .reciept {
+        width: 100%;
+    }
+}
+
+.Recipe .h2 {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
 }

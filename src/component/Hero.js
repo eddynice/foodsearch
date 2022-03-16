@@ -7,6 +7,7 @@ export default function Hero({slide}) {
     const length = slide.length 
     const timeout =useRef(null);
 
+    
 
 useEffect(() => {
         const nextSlide = ()=>{

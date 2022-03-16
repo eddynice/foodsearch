@@ -4,14 +4,16 @@ import image2 from '../img/download.jpg'
 
 
 
-export const SlideData =[
-  {
-  images:image
-  },
-  {
-    images:image1
+export const SlideData = [{
+        images: image,
+        caption: 'Slide 1'
     },
     {
-      images:image2
-      },
+        images: image1,
+        caption: 'Slide 3'
+    },
+    {
+        images: image2,
+        caption: 'Slide jjjjj2'
+    },
 ]
